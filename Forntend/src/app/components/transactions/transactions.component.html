@@ -1,0 +1,36 @@
+<div class="transactions-container">
+  
+  <!--SCREEN-->
+  <div class="transactions-content">
+    <div class="screen-and-buttons">
+      <div class="screen-buttons-left">
+        <div class="near-screen-button">
+          <label></label>
+        </div>
+        <div class="near-screen-button">
+          <label></label>
+        </div>
+      </div>
+      <div class="screen-container">
+        <ul class="heroes">
+          <li *ngFor="let transaction of transactions">
+            <span class="badge">{{transaction.id}}</span> 
+            <span class="badge">{{transaction.amount}}</span> 
+             <span class="badge">{{transaction.transactionCategory.categoryName}}</span> 
+             <span class="badge">{{transaction.transactionCategory.categoryDescription}}</span> 
+              <span class="badge">{{transaction.transactionDate | date:'yyyy-MM-dd HH:mm a z':'+0900'}}</span> 
+           
+          </li>
+        </ul>
+      </div>
+      <div class="screen-buttons-right">
+        <div class="near-screen-button">
+          <label></label>
+        </div>
+        <div class="near-screen-button">
+          <label></label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
